@@ -27,13 +27,18 @@
 .content{
 	margin: 5px 10px;
 	padding: 10px;
+	/*width: 100%;*/
+	
 }
+
+
 
 .article{
 	
 	background-color: white;
-	width: 68%;
+	width: 65%;
 	margin: 15px 5px;
+	margin-right: 500px;
 	padding: 15px;	
 	box-shadow: 1px 1px 1px #888888;
 	
@@ -41,10 +46,19 @@
 .side_bar{
 	background-color: white;
 	float:right;
-	width: 24%;
-	margin: 15px;
+	width: 27%;
+	/*margin-left:-950px;*/
+	margin-top: -835px;
+	
 	box-shadow: 1px 1px 1px #888888;
 	padding: 20px 10px;
+	
+	
+}
+
+.article_list{
+	width: 100%;
+	float: left;
 	
 }
 
@@ -108,4 +122,8 @@ button{
 	background-color:blue;
 	border: 1px solid;
 	margin: :;;
+}
+
+.clear{
+	clear: both;
 }
