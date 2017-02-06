@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+		<style>
+			.number{
+				width: 50px;
+				height: 50px;
+				background: red;
+				color: #fff;
+				text-align: center;
+				line-height: 50px;
+				margin: 10px;
+				float: left;
+			}
+		</style>
+			
+	<body>
+		<input type="text" id="inner"/>
+		<input type="button" value="左侧入" id="leftIn" />
+		<input type="button" value="右侧入" id="rightIn"/>
+		<input type="button" value="左侧出" id="leftOut"/>
+		<input type="button" value="右侧出" id="rightOut"/>
+	
+		<div id="queue">
+			<div class="number">12</div>
+			<div class="number">12</div>
+			<div class="number">12</div>
+			<div class="number">12</div>
+			<div class="number">12</div>
+			<div class="number">12</div>
+		</div>
+		
+		<script>
+			var btnLeftIn = document.getElementById("leftIn");
+			var btnRightIn = document.getElementById("rightIn");
+			var btnLeftOut = document.getElementById("leftOut");
+			var btnRightOut = document.getElementById("rightOut");
+			var inner = document.getElementById("inner");
+			var queue = document.getElementById("queue");
+			var num=[];
+			var str="";
+						
+			function getNum(){
+				if(inner.value==""){//正则过滤用户输入
+					alert("请输入数据");
+				}
+				return inner.value;			
+			}
+			
+			function leftIn(){
+				var newNum = getNum();
+				num.unshift(newNum);
+				render();
+			}
+			
+			function rightIn(){
+				var newNum = getNum();
+				num.push(newNum);
+				render();
+			}
+			
+			function leftOut(){
+				num.splice(0,1);
+				render();
+			}
+			
+			function rightOut(){
+				num.splice(-1,1);
+				render();
+			}
+			
+			function render(){
+				str="";
+				for(var i=0;i<num.length;i++){
+					console.log(num[i]);
+					str+="<div class='number'>"+num[i]+"</div>";
+				}
+				queue.innerHTML = str;
+			}
+			
+			function attach(){
+				btnLeftIn.onclick = leftIn;
+				btnRightIn.onclick = rightIn;
+				btnLeftOut.onclick = leftOut;
+				btnRightOut.onclick = rightOut;
+			}
+			
+			function init(){
+				attach();
+			}
+			
+			init();
+		</script>
+	</body>
+</html>

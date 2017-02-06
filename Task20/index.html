@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+		<style>
+			.number{
+				width: 50px;
+				height: 50px;
+				background: red;
+				color: #fff;
+				text-align: center;
+				line-height: 50px;
+				margin: 10px;
+				float: left;
+			}
+		</style>
+			
+	<body>
+		<textarea id="inner"></textarea>
+		<input type="button" value="左侧入" id="leftIn" />
+		<input type="button" value="右侧入" id="rightIn"/>
+		<input type="button" value="左侧出" id="leftOut"/>
+		<input type="button" value="右侧出" id="rightOut"/>
+		<input type="text" id="txtSelect" />
+		<input type="button" value="查询" id="select" />
+		<div id="queue"></div>
+		
+		<script>
+			var btnLeftIn = document.getElementById("leftIn");
+			var btnRightIn = document.getElementById("rightIn");
+			var btnLeftOut = document.getElementById("leftOut");
+			var btnRightOut = document.getElementById("rightOut");
+			var btnSelect = document.getElementById("select");
+			var txtSelect = document.getElementById("txtSelect");
+			var inner = document.getElementById("inner");
+			var queue = document.getElementById("queue");
+			var num=[];
+			var str="";
+						
+			function getNum(){
+				if(inner.value==""){
+					alert("请输入数据");
+				}
+				return inner.value;			
+			}
+			
+			function leftIn(){
+				var newNum = getNum();
+				num.unshift(newNum);
+				render();
+			}
+			
+			function rightIn(){
+				var newNum = getNum();
+				num.push(newNum);
+				render();
+			}
+			
+			function leftOut(){
+				num.splice(0,1);
+				render();
+			}
+			
+			function rightOut(){
+				num.splice(-1,1);
+				render();
+			}
+			
+			function render(){
+				str="";
+				for(var i=0;i<num.length;i++){
+					console.log(num[i]);
+					str+="<div class='number'>"+num[i]+"</div>";
+				}
+				queue.innerHTML = str;
+			}
+			
+			function selectValue(){
+				var txtValue = txtSelect.value;
+				var nowValue = queue.innerText;
+				var patt = new RegExp(nowValue,"g");
+				var result = patt.exec(txtValue);
+				 
+			}
+			
+			function attach(){
+				btnLeftIn.onclick = leftIn;
+				btnRightIn.onclick = rightIn;
+				btnLeftOut.onclick = leftOut;
+				btnRightOut.onclick = rightOut;
+				btnSelect.onclick = selectValue;
+			}
+			
+			function init(){
+				attach();
+			}
+			
+			init();
+		</script>
+	</body>
+</html>

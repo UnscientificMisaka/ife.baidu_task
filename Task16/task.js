@@ -18,7 +18,14 @@ var aqiData = {};//定义函数对象
 function addAqiData() {
 	var city = document.getElementById("aqi-city-input").value.trim();
 	var quaility = document.getElementById("aqi-value-input").value.trim();
-	aqiData[city] = quaility;
+	var quailityPattern = /^[0-9]*$/;
+//	var cityPattern = 
+	if(quaility.match(quailityPattern)==null){
+		alert("请输入合法的空气质量指数");
+	}
+	else{
+		aqiData[city] = quaility;
+	}
 	
 
 }
@@ -72,3 +79,11 @@ function init() {
 init();
 
 }
+//
+//var str = "测地方是678678册浮点数";
+//var patt = /^[\u4e00-\u9fa5]*/;
+//console.log(str.match(patt));
+//
+//var str1 = "1233443dfsdf";
+//var patt1 = /^[0-9]*$/;
+//console.log(str1.match(patt1));

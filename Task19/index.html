@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+		<style>
+			.container{
+				margin: 200px 20px;
+				width: 50px;
+				height: 100%;
+				position: relative;
+				display: block;
+				float: left;
+			}
+		
+		
+			.number{
+				width: 50px;
+				background: red;
+				color: #fff;
+				text-align: center;
+				position: absolute;
+				bottom: 0px;
+				
+			}
+		</style>
+			
+	<body>
+		<input type="text"  id="inner"/>
+		<input type="button" name="btn" value="左侧入" id="leftIn" />
+		<input type="button" name="btn" value="右侧入" id="rightIn"/>
+		<input type="button" name="btn" value="左侧出" id="leftOut"/>
+		<input type="button" name="btn" value="右侧出" id="rightOut"/>
+		<input type="button" name="btn" value="冒泡排序" id="bubbleSort" />
+		<div id="queue"></div>
+		
+		<script>
+//			var btn = document.getElementsByName();
+			
+			
+		
+			var btnLeftIn = document.getElementById("leftIn");
+			var btnRightIn = document.getElementById("rightIn");
+			var btnLeftOut = document.getElementById("leftOut");
+			var btnRightOut = document.getElementById("rightOut");
+			var btnBubbleSort = document.getElementById("bubbleSort");
+			var inner = document.getElementById("inner");
+			var queue = document.getElementById("queue");
+			
+			
+			var num=[];
+			var str="";
+						
+			var patt = /^[0-9]*$/g;
+			
+						
+			function getNum(){
+				if(inner.value.match(patt)&&(inner.value>=10&&inner.value<=100)){
+					return inner.value;	
+				}
+				else{
+					alert("请输入合法的数字");
+					return false;
+				}
+			}
+			
+			function leftIn(){
+				var newNum = getNum();
+				num.unshift(newNum);
+				render();
+			}
+			
+			function rightIn(){
+				var newNum = getNum();
+				num.push(newNum);
+				render();
+			}
+			
+			function leftOut(){
+				num.splice(0,1);
+				render();
+			}
+			
+			function rightOut(){
+				num.splice(-1,1);
+				render();
+			}	
+			
+			function render(){
+				console.log("1")
+				str="";
+				for(var i=0;i<num.length;i++){
+					str+="<div class='container'><div class='number' style=height:"+num[i]+"px>"+num[i]+"</div></div>";
+				}
+				queue.innerHTML = str;
+			}
+			
+			function attach(){
+				btn[0].onclick = leftIn;
+				btnLeftIn.onclick = leftIn;
+				btnRightIn.onclick = rightIn;
+				btnLeftOut.onclick = leftOut;
+				btnRightOut.onclick = rightOut;
+				btnBubbleSort.onclick = bubbleSort;
+			}
+			
+			function bubbleSort(){
+				var tmp;
+				for(var i=num.length;i>0;i--){
+					var flag = 0;
+					for(var j=0;j<i;j++){
+						if(num[j]>num[j+1]){
+							tmp=num[j];
+							num[j]=num[j+1];
+							num[j+1]=tmp;
+							flag++;						
+						}
+					}
+					if(flag == 0){
+						break;
+					}
+					setTimeout(render,3000);
+				}
+			}
+			
+			function sleep(){
+				
+			}
+			
+			
+			function init(){
+				attach();
+			}
+			
+			init();
+		</script>
+	</body>
+</html>
