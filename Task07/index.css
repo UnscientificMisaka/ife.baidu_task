@@ -10,6 +10,12 @@ a{
 li{
 	list-style: none;
 }
+
+.container{
+	min-width: 1280px;
+	width: 100%;
+}
+
 .navbar{
 	width: 90%;
 	margin: 10px auto;
@@ -220,53 +226,183 @@ li{
 .search{
 	background: url(img/map.jpg);
 	background-size:cover;
+	height: 350px;
+	width: 100%;
+	text-align: center;
 }
 
 .search-title{
-	padding-top: 80px;
+	padding-top: 40px;
 	font-size: 22px;
   	font-family: "Microsoft YaHei";
   	color: rgba(255, 255, 255, 0.8);
   	line-height: 2.605;
-  	text-align: center;
+
+}
+
+	
+.search-line{
+	width: 30px;
+	height: 20px;
+	margin-bottom: 0px;
+	display: inline-block;
+	border-top: 2px solid #fff;
+	transition: width 1.5s;
+	-moz-transition:width 1.5s; /* Firefox 4 */
+	-webkit-transition:width 1.5s; /* Safari and Chrome */
+	-o-transition:width 1.5s; /* Opera */
+}
+
+.search-line:hover{
+	width: 250px;
+	transition: width 1.5s;
+	-moz-transition:width 1.5s; /* Firefox 4 */
+	-webkit-transition:width 1.5s; /* Safari and Chrome */
+	-o-transition:width 1.5s; /* Opera */
 }
 
 .search-subtitle{
+	margin-top: -10px;
 	font-size: 12px;
   	font-family: "Microsoft YaHei";
   	color: rgba(255, 255, 255, 0.8);
   	line-height: 2.605;
-  	text-align: center;
+  
 }
 
 .search-form{
 	position: relative;
-
-}
-
-#search-form{
 	margin-top: 70px;
-	text-align: center;
+	
 }
 
 .search-box{
-	width: 200px;
+	width: 240px;
 	height: 36px;
-	margin: 0 20px;
+	margin: 0 10px;
 	display: inline-block;
-	background: url(img/select.png) no-repeat right #fff;
-
+	background: url(img/select.png) no-repeat  #fff;
+	background-position:96% 50% ;
 }
-/*chrome和firefox边框不一样*/
-select{
-	border:1px soild #000;
-	-webkit-appearance: none;
+
+.search-btn{
+	width: 240px;
+	height: 36px;
+	background: #BE4F48;
+	color: #fff;
+	line-height: 36px;
+	border: none;
 	outline: none;
+	cursor: pointer;
 }
 
 option{
-	font-size: 12px;
+	width: 236px;
+	height: 32px;
+	padding-left: 20px;
+	font-size: 14px;
   	font-family: "Microsoft YaHei";
   	color: rgba(50, 51, 51, 0.702);
-  	line-height: 2.167;
+	background:#EDEAEA;
+}
+
+
+
+select{
+	-moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari 和 Chrome */
+    appearance:none;
+    outline: none;
+    color: #B3B3B3;
+    padding-left: 10px;
+}
+
+select:focus{
+	border: 2px solid #BE4F48;
+	border-bottom: none;
+}
+
+option:checked{
+	
+	outline: none;
+	border: 2px solid #BE4F48;
+}
+
+.activity{
+	width: 100%;
+	height: 500px;
+	background: #EDEAEA;
+}
+
+.activity-content{
+	display: block;
+	margin: 0 10%;
+}
+
+.activity-box{
+	display: inline-block;
+	padding: 50px 25px;
+	width: 210px;
+	height: 350px;
+	
+}
+
+.activity-box img{
+	border-top: 10px solid #fff;
+	border-bottom: 10px solid #fff;
+	border-left: 5px solid #fff;
+	border-right: 5px solid #fff;
+}
+
+.activity-title{
+	text-align: center;
+}
+
+.activity span:first-child{
+	display: block;
+	margin-top: 10px;
+	font-size: 14px;
+	color: #44403F;
+
+}
+
+.activity span:nth-child(2){
+	margin-top: 5px;
+	font-size: 12px;
+	color: #B3AFAC;
+}
+
+.activity-box:nth-child(2)>.activity-title{
+	margin-bottom: 10px;
+}
+
+.activity-box:nth-child(2) span:first-child{
+	font-size: 24px;
+	text-align: right;
+	text-indent: 10px;
+	letter-spacing: 23px;
+}
+
+.more{
+	width: 100%;
+	
+}
+
+.more-col:first-child{
+	display: inline-block;
+	width: 68%;
+	height: 560px;
+	/*background: url(img/banner3.jpg) no-repeat cover;*/
+}
+
+.more-col{
+	display: inline-block;
+	height: 560px;
+	width: 33%;
+	background: yellow;
+}
+
+.more-col img{
+	width: 100%;
+	height: 560px;
 }
