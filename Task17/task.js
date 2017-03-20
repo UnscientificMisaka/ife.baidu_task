@@ -112,7 +112,6 @@ function graTimeChange() {
 		if(radioObj[i].checked){
 			if(radioObj[i].value != pageState.nowGraTime){
 				// 设置对应数据
-				
 				pageState.nowGraTime = radioObj[i].value;
 				initAqiChartData();
 				// 调用图表渲染函数
@@ -180,9 +179,6 @@ var monthValueAverage = 0;
 
 	switch(pageState.nowGraTime){
 		case "day":	
-//				for(var date in chartData){
-//					console.log(date+":"+chartData[date]);
-//				}
 				var value = cityObj[cityObj.selectedIndex].value;
 				chartData = aqiSourceData[value];
 				break;
@@ -200,10 +196,6 @@ var monthValueAverage = 0;
 						weekValueSum=0;
 					}
 				}
-//				chartData = weekChartData;
-//				for(var date in chartData){
-//					console.log(date+":"+chartData[date]);
-//				}
 				break;
 		case "month":
 				var daySum = 0,monthSum = 0;
@@ -218,10 +210,6 @@ var monthValueAverage = 0;
 						monthValueSum=0;
 					}
 				}
-//				chartData = monthChartData;
-//				for(var date in chartData){
-//					console.log(date+":"+chartData[date]);
-//				}
 				break;
 }
 	
