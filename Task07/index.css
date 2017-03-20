@@ -11,6 +11,10 @@ li{
 	list-style: none;
 }
 
+button{
+	cursor: pointer;
+}
+
 .container{
 	min-width: 1280px;
 	width: 100%;
@@ -332,11 +336,11 @@ option:checked{
 	width: 100%;
 	height: 500px;
 	background: #EDEAEA;
+	text-align: center;
 }
 
 .activity-content{
 	display: block;
-	margin: 0 10%;
 }
 
 .activity-box{
@@ -385,17 +389,11 @@ option:checked{
 
 .more{
 	width: 100%;
-	
-}
-
-.more-col:first-child{
-	display: inline-block;
-	width: 68%;
-	height: 560px;
-	/*background: url(img/banner3.jpg) no-repeat cover;*/
+	height: 1180px;
 }
 
 .more-col{
+	float: left;
 	display: inline-block;
 	height: 560px;
 	width: 33%;
@@ -405,4 +403,468 @@ option:checked{
 .more-col img{
 	width: 100%;
 	height: 560px;
+}
+
+.more-col:first-child{
+	width: 66%;
+}
+
+.more-text1{
+	width: 500px;
+	height: 300px;
+	margin:0 auto;
+	margin-top: -430px;
+	text-align: center;
+}
+
+.more-text1 span{
+	display: block;
+	color: #fff;
+}
+.more-text1 span:first-child{
+	font-size: 50px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.more-text1 span:nth-child(2){
+	font-size: 150px;
+    height: 150px;
+    line-height: 150px;
+}
+
+
+.more-text1 span:nth-child(3),.more-text1 span:nth-child(4){
+	margin-top: 15px;
+	font-size: 22px;
+    line-height: 22px;
+}
+
+.more-col:nth-child(2),.more-col:nth-child(4){
+	background: #fff;
+}
+
+.more-col:nth-child(3){
+	background: #E84E4C;
+}
+
+.more-text2{
+	width: 300px;
+	height: 300px;
+	margin: 100px auto;
+	text-align: center;
+}
+
+.more-text2 p{
+	margin-top: 30px;
+	text-align: left;
+	font-size: 12px;
+  	font-family: "SimSun";
+  	color: rgb(170, 170, 170);
+	line-height: 2.5;
+}
+
+
+
+.more-text2 span{
+	font-size: 20px;
+    font-weight: 700;
+}
+
+.more-text2 span:nth-child(2){
+	color: #E84E4C;
+}
+
+.more-col button{
+	width: 100px;
+	height: 35px;
+	margin-top: 30px;
+	font-size: 12px;
+  	font-family: "Microsoft YaHei";
+  	color: rgb(226, 92, 96);
+  	line-height: 2.613;
+  	outline: none;
+  	background: #fff;
+  	border: 1px solid rgb(226, 92, 96);
+}
+
+.more-col input[type="radio"]{
+	margin-top: 30px;
+	opacity: 0;
+	background: #fff;
+	cursor: pointer;
+	z-index: 999;
+}
+
+.more-text2 input[type="radio"]:first-child:checked +  .radio i:first-child{
+	background: red;
+}
+
+.more-text2 input[type="radio"]:nth-child(2):checked +  .radio i:nth-child(2){
+	background: red;
+}
+
+.more-text2 input[type="radio"]:nth-child(3):checked +  .radio i:nth-child(3){
+	background: red;
+}
+
+
+.radio{
+	/*margin-left: 6px;*/
+	margin-top: -46px;
+}
+
+.radio i{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-top: 30px;
+	border-radius: 10px;
+	border: 1px solid rgb(226, 92, 96);
+	
+}
+
+.more-text3{
+	width: 300px;
+	height: 300px;
+	margin: 200px auto;
+	text-align: center;
+}
+
+.more-text3 span{
+	display: block;
+	font-size: 21px;
+  	font-family: "SimHei";
+  	color: rgb(255, 255, 255);
+  	line-height: 1.446;
+}
+
+.more-text3 span:nth-child(3){
+	width: 30px;
+	height: 20px;
+	margin-top:10px ;
+	border-top: 2px solid #fff;
+	margin: 0 auto;
+	margin-top:15px;
+	transition: width 1s;
+	-moz-transition:width 1s; /* Firefox 4 */
+	-webkit-transition:width 1s; /* Safari and Chrome */
+	-o-transition:width 1s; /* Opera */
+}
+
+.more-text3 span:nth-child(3):hover{
+	width: 180px;
+	transition: width 1s;
+	-moz-transition:width 1s; /* Firefox 4 */
+	-webkit-transition:width 1s; /* Safari and Chrome */
+	-o-transition:width 1s; /* Opera */
+}
+
+.more-text3 button{
+	width: 160px;
+	height: 40px;
+	margin-top: 5px;
+	font-size: 21px;
+  	font-family: "SimHei";
+  	line-height: 1.143;
+	color: #FFFFFF;
+	background: transparent;
+	border: 1px solid #fff;
+}
+
+.more-col:nth-child(4) .more-text3 span{
+	color: #000;
+}
+
+.more-col:nth-child(4) .more-text3 span:nth-child(3){
+	border-top: 2px solid #adadad;
+}
+
+.more-col:nth-child(4) .more-text3 button{
+	color: rgb(226, 92, 96);
+	border: 1px solid rgb(226, 92, 96);
+}
+
+.more-col:nth-child(2):before{
+	content: "";
+	display: block;
+	position: relative;
+	top: 200px;
+	left: -440px;
+	border-top: 25px solid transparent;
+    border-right: 40px solid #fff;
+    border-bottom: 25px solid transparent;
+}
+
+.more-col:nth-child(5):after{
+	content: "";
+	display: block;
+	position: relative;
+	top: -300px;
+	border-top: 25px solid transparent;
+    border-left: 40px solid #fff;
+    border-bottom: 25px solid transparent;
+}
+
+.join{
+	height: 700px;
+	width: 100%;
+	text-align: center;
+}
+
+.join-title{
+	margin-top: 100px;
+	/*text-align: center;*/
+}
+
+.join-title span{
+	display: block;
+	margin: 0 auto;
+	font-size: 21px;
+	font-family: "SimHei";
+	color: rgb(50, 51, 51);
+	line-height: 1.446;
+}
+
+.join-title span:nth-child(2){
+	width: 30px;
+	height: 20px;
+	margin-top:10px ;
+	border-top: 2px solid rgb(226, 92, 96);
+}
+
+.join-title span:nth-child(2):hover{
+	width: 180px;
+	transition: width 1s;
+	-moz-transition:width 1s; /* Firefox 4 */
+	-webkit-transition:width 1s; /* Safari and Chrome */
+	-o-transition:width 1s; /* Opera */
+}
+
+.join-title p{
+	font-size: 12px;
+  	font-family: "Microsoft YaHei";
+  	color: rgb(170, 170, 170);
+  	line-height: 1.5;
+}
+
+.join-us{
+	width: 1200px;
+	height: 400px;
+	margin: 0 auto;
+	margin-top:100px ;
+	
+	/*margin-left: 100px;*/
+}
+.join-agreement{
+	margin-left: 50px;
+	float: left;
+	width: 400px;
+	height: 400px;
+	font-size: 20px;
+	text-align: left;
+}
+
+.join-box{
+	margin: 20px auto;
+}
+
+.join-box span{
+	font-size: 14px;
+	font-family: "SimHei";
+	color: rgba(35, 24, 21, 0.8);
+	line-height: 1.929;
+}
+
+.join-box p{
+	margin-top: 20px;
+	font-size: 12px;
+  	font-family: "SimSun";
+  	color: rgba(35, 24, 21, 0.6);
+  	line-height: 1.75;	
+}
+
+.join-box span:last-child{
+	/*text-align: right;*/
+	float: right;
+}
+
+.join-form{
+	float: left;
+	margin-left: 100px;
+	display: block;
+	width: 650px;
+	height: 400px;
+}
+
+.join-form input{
+	height: 40px;
+    width: 300px;
+    font-size: 14px;
+    color: #4E3A4F;
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    background-color: #E3E3E3;
+}
+
+.join-form textarea{
+	width: 623px;
+    height: 160px;
+    font-size: 14px;
+    color: #4E3A4F;
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    background-color: #E3E3E3;
+}
+
+.join-form input[type="button"]{
+	width: 623px;
+    height: 40px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 0;
+    outline: 0;
+    background-color: #E3E3E3;
+}
+
+.footer{
+	width: 100%;
+    height: 400px;
+    text-align: center;
+    background-color: #33363F;
+}
+
+.footer span{
+	display: block;
+	padding-top: 100px;
+	font-size: 21px;
+	font-family: "SimHei";
+	color: rgb(255, 255, 255);
+	line-height: 2.303;
+}
+
+.footer p{
+	margin-top: 10px;
+	font-size: 12px;
+	font-family: "SimHei";
+  	color: rgb(255, 255, 255);
+  	line-height: 1.5;
+}
+
+.footer form{
+	margin-top: 30px;
+}
+
+.footer input[type="email"]{
+	width: 500px;
+    height: 40px;
+    font-size: 15px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    color: #75757F;
+}
+
+.footer input[type="submit"]{
+	margin-left: -5px;
+	width: 100px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 5px;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    background-color: #75757F;
+    transition: background 2s;
+	-moz-transition:background 2s; /* Firefox 4 */
+	-webkit-transition:background 2s; /* Safari and Chrome */
+	-o-transition:background 2s; /* Opera */
+}
+
+.footer input[type="submit"]:hover{
+	background:#33363F;
+	transition: background 2s;
+	-moz-transition:background 2s; /* Firefox 4 */
+	-webkit-transition:background 2s; /* Safari and Chrome */
+	-o-transition:background 2s; /* Opera */
+}
+
+.footer-icon{
+	margin-top: 30px;
+	width: 100%;
+    height: 50px;
+    color: #fff;
+    font-size: 30px;
+    display: inline-block;
+}
+
+.footer-icon i{
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	padding-left: 20px;
+	text-align: center;
+}
+
+.footer-icon i:first-child:before{
+	content: "";
+	background: url(img/QQ.png);
+	position: absolute;
+	height: 32px;
+	width: 32px;
+}
+
+.footer-icon i:nth-child(2):before{
+	content: "";
+	background: url(img/weibo.png);
+	position: absolute;
+	height: 32px;
+	width: 32px;
+}
+
+.footer-icon i:nth-child(3):before{
+	content: "";
+	background: url(img/twiter.png);
+	position: absolute;
+	height: 32px;
+	width: 32px;
+}
+
+.footer-icon i:nth-child(4):before{
+	content: "";
+	background: url(img/global.png);
+	position: absolute;
+	height: 32px;
+	width: 32px;
+}
+
+.company{
+	width: 100%;
+    height: 60px;
+    /*text-align: center;*/
+    background-color: #30303A;
+}
+
+.company-box{
+	display: inline-block;
+	width: 300px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+}
+
+.company a{
+	color: #fff;
+}
+
+.company-box:last-child{
+	float: right;
 }

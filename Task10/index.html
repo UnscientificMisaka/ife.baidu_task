@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Flex布局</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 20px;
+			}
+			
+			.container{
+				display: -webkit-flex; /* Safari */
+  				display: flex;
+  				flex-direction: row;
+  				justify-content:space-between;
+  				align-items:center;
+			}
+			
+			.common{			
+				width: 150px;
+				margin-bottom: 10px;
+				border: 1px solid red;	
+			}
+			
+			.box1{
+				
+				height: 120px;
+			}
+			
+			.box2{
+				height: 100px;
+			
+			}
+			
+			.box3{
+				height: 40px;
+			
+			}
+			
+			.box4{
+				height: 200px;
+				border: 1px solid blue;
+
+			}
+			
+			@media only screen and (max-width: 640px) {
+				.container{
+					align-items: flex-start;
+					flex-wrap:wrap ;
+					
+				}
+				
+				.box4{
+					order: -1;
+				}
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="box1 common"></div>
+			<div class="box2 common"></div>
+			<div class="box3 common"></div>
+			<div class="box4 common"></div>
+		</div>
+	</body>
+</html>
